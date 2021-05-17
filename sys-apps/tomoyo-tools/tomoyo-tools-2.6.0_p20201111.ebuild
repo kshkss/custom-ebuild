@@ -3,12 +3,12 @@
 
 EAPI=5
 
-inherit epatch multilib toolchain-funcs
+inherit multilib toolchain-funcs
 
 MY_P="${P/_p/-}"
 DESCRIPTION="TOMOYO Linux tools"
-HOMEPAGE="http://tomoyo.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/tomoyo/53357/${MY_P}.tar.gz"
+HOMEPAGE="https://osdn.net/projects/tomoyo/"
+SRC_URI="https://osdn.net/dl/tomoyo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,8 +23,6 @@ RDEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-warnings.patch
-
 	# Fix libdir
 	sed -i \
 		-e "s:/usr/lib:/usr/$(get_libdir):g" \
