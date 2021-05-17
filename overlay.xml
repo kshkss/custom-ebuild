@@ -1,12 +1,14 @@
 <?xml version="1.0" ?>
-<repositories version="1.0">
-	<repo priority="50" quality="experimental" status="unofficial">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
 		<name>kshkss</name>
-		<description>portage overlay</description>
+		<description lang="en">portage overlay</description>
 		<homepage>https://github.com/kshkss/custom-ebuild</homepage>
-		<owner>
+		<owner type="person">
 			<email>kshkss@users.noreply.github.com</email>
 		</owner>
-		<source type="git">git://github.com/kshkss/custom-ebuild.git</source>
+		<source type="git">https://github.com/kshkss/custom-ebuild.git</source>
+		<source type="git">git+ssh://git@github.com/kshkss/custom-ebuild.git</source>
+		<feed>https://github.com/kshkss/custom-ebuild/commits/master.atom</feed>
 	</repo>
 </repositories>
